@@ -44,11 +44,11 @@ adress_object = soup.select(".list-card-addr")
 adresses = [n.text for n in adress_object]
 print(adresses)
 
-chrome_driver_path = "E:\development\chromedriver.exe"
+chrome_driver_path = "YOUR DRIVER PATH"
 driver = webdriver.Chrome(executable_path = chrome_driver_path)
 
 for n in range(0, len(adresses)):
-    driver.get("https://docs.google.com/forms/d/e/1FAIpQLSfYYUEYa0ne_nMntkJVzXtrT1KLJ3RjicL82KIKxw9V3YIskg/viewform?usp=sf_link")
+    driver.get("PUT GOOGLE FORM ADRESS HERE")
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/div[1]/input').send_keys(adresses[n])
     time.sleep(1)
